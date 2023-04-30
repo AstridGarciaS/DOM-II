@@ -16,5 +16,25 @@ window.onload = function(evt){
         })
     })
 }
-//click
+//3- click
+document.body.addEventListener('click', evt =>{
+    evt.target.classList.toggle('mirror')
+})
 
+//4- dblclick
+document.body.addEventListener('dblclick', evt =>{
+    evt.target.outerHTML = '';
+})
+
+//5- keydown
+window.addEventListener('keydown', evt => {
+    if (evt.key == 6) {
+        document.body.innerHTML = '<h1>YOU RAN ORDER 66<h1>'
+    }
+ });
+
+//6- mousemove
+document.body. addEventListener('mousemove', evt =>{
+    const {clientX, clientY} = evt
+    console.log(`mouse is at ${clientX}, ${clientY}`)
+})
