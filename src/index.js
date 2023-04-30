@@ -36,5 +36,18 @@ window.addEventListener('keydown', evt => {
 //6- mousemove
 document.body. addEventListener('mousemove', evt =>{
     const {clientX, clientY} = evt
-    console.log(`mouse is at ${clientX}, ${clientY}`)
+ //   console.log(`mouse is at ${clientX}, ${clientY}`)
 })
+// 7- mouseenter
+// 8- mouseleaves
+const destinations = document.querySelectorAll('.destination')
+for (let destination of destinations) {
+    destination.addEventListener('mouseenter', evt => {
+        destination.style.fontWeight = 'bold'
+    })
+    destination. addEventListener('mouseleave',() => {
+        setTimeout(()=> {
+            destination.style.fontWeight = 'initial'
+        }, 500)
+    })
+}
